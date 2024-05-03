@@ -1,0 +1,101 @@
+config:
+  label: Growing Station
+  sidebar: true
+  period: D
+slots:
+  dataZoom:
+    - component: oh-chart-datazoom
+      config:
+        show: true
+        type: slider
+  grid:
+    - component: oh-chart-grid
+      config:
+        show: false
+  legend:
+    - component: oh-chart-legend
+      config:
+        orient: horizontal
+        show: true
+  series:
+    - component: oh-time-series
+      config:
+        gridIndex: 0
+        item: Growing_Station_Growing_Station_Light_Percent_Set
+        name: light_percent
+        type: line
+        xAxisIndex: 0
+        yAxisIndex: 0
+    - component: oh-time-series
+      config:
+        gridIndex: 0
+        item: Growing_Station_Growing_Station_Light_S1
+        name: light_s1_lux
+        type: line
+        xAxisIndex: 0
+        yAxisIndex: 1
+    - component: oh-time-series
+      config:
+        gridIndex: 0
+        item: Growing_Station_Growing_Station_Light_S2
+        name: light_s2_lux
+        type: line
+        xAxisIndex: 0
+        yAxisIndex: 1
+    - component: oh-time-series
+      config:
+        gridIndex: 0
+        item: Growing_Station_Growing_Station_Light_S3
+        name: light_s3_lux
+        type: line
+        xAxisIndex: 0
+        yAxisIndex: 1
+    - component: oh-time-series
+      config:
+        gridIndex: 0
+        item: Growing_Station_Growing_Station_Temperature_S1
+        name: temerature_C
+        type: line
+        xAxisIndex: 0
+        yAxisIndex: 0
+    - component: oh-time-series
+      config:
+        gridIndex: 0
+        item: Growing_Station_Growing_Station_Humidity_S1
+        name: humidity_%
+        type: line
+        xAxisIndex: 0
+        yAxisIndex: 0
+    - component: oh-time-series
+      config:
+        gridIndex: 0
+        item: Growing_Station_Growing_Station_Pressure
+        name: pressure_hPa
+        type: line
+        xAxisIndex: 0
+        yAxisIndex: 1
+    - component: oh-time-series
+      config:
+        gridIndex: 0
+        item: Growing_Station_Growing_Station_Gas_Resistance
+        name: gas_resistance_kOhms
+        type: line
+        xAxisIndex: 0
+        yAxisIndex: 1
+  xAxis:
+    - component: oh-time-axis
+      config:
+        gridIndex: 0
+  yAxis:
+    - component: oh-value-axis
+      config:
+        gridIndex: 0
+        max: "100"
+        min: "0"
+        name: temp_hum_pwm
+    - component: oh-value-axis
+      config:
+        gridIndex: 0
+        max: "25000"
+        min: "0"
+        name: light_lux

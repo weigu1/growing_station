@@ -1,0 +1,69 @@
+UID: mqtt:topic:udoo_mqtt_server:growing_station
+label: Growing Station
+thingTypeUID: mqtt:topic
+configuration: {}
+bridgeUID: mqtt:broker:udoo_mqtt_server
+channels:
+  - id: growing_station_light_s1
+    channelTypeUID: mqtt:number
+    label: Growing Station Light S1
+    description: ""
+    configuration:
+      stateTopic: weigu/growing_station/data
+      transformationPattern: JSONPATH:$.light_s1_lux
+  - id: growing_station_light_s2
+    channelTypeUID: mqtt:number
+    label: Growing Station Light S2
+    description: null
+    configuration:
+      stateTopic: weigu/growing_station/data
+      transformationPattern: JSONPATH:$.light_s2_lux
+  - id: growing_station_light_s3
+    channelTypeUID: mqtt:number
+    label: Growing Station Light S3
+    description: null
+    configuration:
+      stateTopic: weigu/growing_station/data
+      transformationPattern: JSONPATH:$.light_s3_lux
+  - id: growing_station_temperature_s1
+    channelTypeUID: mqtt:number
+    label: Growing Station Temperature S1
+    description: null
+    configuration:
+      stateTopic: weigu/growing_station/data
+      transformationPattern: JSONPATH:$.temperature_s1_C
+  - id: growing_station_humidity_s1
+    channelTypeUID: mqtt:number
+    label: Growing Station Humidity S1
+    description: null
+    configuration:
+      stateTopic: weigu/growing_station/data
+      transformationPattern: JSONPATH:$.humidity_s1_%
+  - id: growing_station_pressure
+    channelTypeUID: mqtt:number
+    label: Growing Station Pressure
+    description: null
+    configuration:
+      stateTopic: weigu/growing_station/data
+      transformationPattern: JSONPATH:$.pressure_hPa
+  - id: growing_station_gas_resistance
+    channelTypeUID: mqtt:number
+    label: Growing Station Gas Resistance
+    description: null
+    configuration:
+      stateTopic: weigu/growing_station/data
+      transformationPattern: JSONPATH:$.gas_resistance_kOhms
+  - id: growing_station_light_percent_set
+    channelTypeUID: mqtt:number
+    label: Growing Station Light Percent Set
+    description: null
+    configuration:
+      stateTopic: weigu/growing_station/data
+      transformationPattern: JSONPATH:$.light_percent
+  - id: growing_station_light_pwm_set
+    channelTypeUID: mqtt:number
+    label: Growing Station Light PWM Set
+    description: null
+    configuration:
+      stateTopic: weigu/growing_station/data
+      transformationPattern: JSONPATH:$.light_pwm_0_255
